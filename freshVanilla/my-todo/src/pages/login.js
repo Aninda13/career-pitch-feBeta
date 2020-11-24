@@ -2,7 +2,9 @@ import React from "react";
 import reactDom from "react-dom"
 import '../scss/login.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import FormCheck from 'react-bootstrap/FormCheck'
+import FormGroup from 'react-bootstrap/FormGroup'
+import { Form } from "react-bootstrap";
 
 class LoginPage extends React.Component {
     constructor(props){
@@ -63,7 +65,9 @@ class LoginBox extends React.Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" className="login-input" placeholder="Password" />
                </div>
-
+               <FormGroup controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Recruiter?" />
+                </FormGroup>
             <button type="button" className="login-btn" onClick={this.submitLogin.bind(this)}>Submit</button>
 
             </div>
@@ -105,7 +109,9 @@ class RegisterBox extends React.Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" className="login-input" placeholder="Password" />
                </div>
-                       
+               <FormGroup controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Recruiter?" />
+                </FormGroup>            
             <button type="button" className="login-btn" onClick={this.submitRegister.bind(this)}>Submit</button>
 
             </div>
